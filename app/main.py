@@ -23,8 +23,13 @@ def triangular_number(num: int):
     test = 8*num + 1
     root = int(math.sqrt(test))
     # ~ ignore this rule: the condition requires the square root of (8x + 1) must be an odd integer to qualify as a triangular number.
-
-    return root * root == test
+    
+    is_triangular = root * root == test
+    return {
+        "message": "Query successful",
+        "number": num,
+        "is_triagular": is_triangular
+    }
        
 # testing the code
 
