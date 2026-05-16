@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: triangular-service
+spec:
+  selector:
+    app: triangular
+  ports:
+  - port: 80
+    targetPort: 8000
+  type: LoadBalancer

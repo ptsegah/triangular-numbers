@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: triangular
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: triangular
+  template:
+    metadata:
+      labels:
+        app: triangular
+    spec:
+      containers:
+      - name: triangular
+        image: rcpiregistry.azurecr.io/triangular:v1
+        ports:
+        - containerPort: 8000
