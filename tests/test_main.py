@@ -22,7 +22,7 @@ def test_triangular_true():
 
 
 def test_triangular_false():
-    for n in [2, 4, 5, 7, 11, 28]:
+    for n in [2, 4, 5, 7, 11]:
         r = client.get(f"/triangular-numbers?num={n}")
         assert r.status_code == 200
         assert r.json()["is_triagular"] is False, f"{n} should not be triangular"
